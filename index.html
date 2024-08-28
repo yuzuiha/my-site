@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Title of Site </title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/style.css">
+
+  </head>
+  
+    <body>
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="links.html">Links</a>
+        </div>
+ 
+        <div class="content">
+            <h1>Homepage</h1>
+            <p>
+                This is a brief description of who you are. Include what
+                you do, what you work in, what value you produce,
+                what kind of person you want to become. Include any 
+                immediate credentials: Bachelor/Master/Postdoc. 
+                Any main projects that define you include in <a href=""> here</a> and 
+                <a href=""> here</a> 
+            </p>
+            <p> <a href="website_template.zip" download="website_template.zip"> Download the full template here</a></p>
+            <p> <a href="website_template_no_gallery.zip" download="website_template_no_gallery.zip"> Download template without gallery</a></p>
+            <p> <a href="https://github.com/psychcool/professional-website-template"> Source Code </a> </p>
+            <h2> Instructions </h2>
+            <ol>
+                <li> <a href="website_template.zip"> Download Template</a> (Rename CNAME file with your website's domain name)</li>
+                <li> <a href="https://pages.github.com/"> Sign up for Github</a> (*or any other static web hosting services)</li>
+                <li> <a href="https://pages.cloudflare.com/"> Sign up for Cloudflare</a> (*or any other security services)</li>
+                <li> *Optional: <a href="https://porkbun.com/">Sign up for Porkbun</a> (*or any other DNS hosts)</li>
+                <li> Download <a href="https://code.visualstudio.com/">Visual Studio Code</a> or <a href="https://www.vim.org/">Vim</a> (*or any other IDEs)</li>
+                <li> Set up a test python server for editing </li> 
+                    <ul> 
+                        <li> python3 -m http.server (http://0.0.0.0:8000/) </li>
+                    </ul>  
+                <li> Link local files to Github repo through git and ssh </li>
+                    <ul> 
+                        <li> ssh-keygen -t ed25519 -C "your_email@example.com"</li>
+                        <li> eval "$(ssh-agent -s)"</li>
+                        <li> ssh-add ~/.ssh/id_ed25519 </li>
+                        <li> cat ~/.ssh/id_ed25519.pub </li>
+                        <hr>
+                        <li> git init</li>
+                        <li> git remote set-url origin git@github.com:githuburlprojectname.git</li>
+                        <li> git add . </li>
+                        <li> git commit -m "message here" </li>
+                        <li> git push -u origin main </li>
+                    </ul>  
+                <li> Set up Github pages </li>
+                    <ul>
+                        <li> *Custom domain </li>
+                        <li> Enforce HTTPS </li>
+                    </ul>
+                <li> *Optional: Buy domain through Porkbun and <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site"> link it to Github </a> </li>
+                    <ul>
+                        <li> Delete ALIAS </li>
+                        <li> Delete CNAME </li>
+                        <li> Create A record (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153) </li>
+                        <li> Create AAAA records (2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153, 2606:50c0:8003::153) </li>
+                    </ul>
+                <li> Set up Cloudflare pages </li>
+                    <ul>
+                        <li> SSL/TLS (strict) </li>
+                        <li> Edge Certificates (Always Use HTTPS) </li>
+                        <li> DNS Records (CNAME: www, domain | A: domain, A record) </li>
+                        <li> *Remove Porkbun Name Servers (ns.porkbun.com) and Replace With
+                            Cloudflare Name Servers (ns.cloudflare.com) </li>
+                    </ul>
+            </ol>
+        </div>
+  
+    </body>
+
+</html>
